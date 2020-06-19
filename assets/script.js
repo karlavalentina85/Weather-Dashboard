@@ -16,7 +16,7 @@ $(document).ready(function() {
 
         //Gets all weather relate info for a city based on lat and longitude
         var searchAllApi = function(lat,lon,city) {
-                var queryURL = "http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&appid=3d2eba2899ca96d0744357d56d76b302";
+                var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&appid=3d2eba2899ca96d0744357d56d76b302";
 
                 $.ajax({
                         url: queryURL,
@@ -145,7 +145,7 @@ $(document).ready(function() {
         //This function calls one api which returns the lat and long of a city which 
         //is the input for the all api function
         var searchCityCurrent = function(city) {
-                var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3d2eba2899ca96d0744357d56d76b302";
+                var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3d2eba2899ca96d0744357d56d76b302";
                 $.ajax({
                   url: queryURL,
                   method: "GET",
